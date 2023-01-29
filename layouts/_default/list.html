@@ -2,7 +2,7 @@
 {{ range .Paginator.Pages }}
 <section>
     <h2 style="margin-bottom:.5rem;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <small>{{- partial "date.html" . -}}</small>
+    <small><i class="fa-duotone fa-calendar"></i>{{- partial "date.html" . -}}</small>
     <p>{{ .Summary }}</p>
     <p class="meta-tag">{{- partial "tags.html" . -}}
 </section>

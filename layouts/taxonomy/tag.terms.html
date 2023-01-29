@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <div class="container">
+    <!-- <h1>All {{ .Type }}</h1> -->
+    <nav>
+      {{ range .Data.Pages }}
+          <a href="{{ .Permalink }}"><i class="fa-duotone fa-tag"></i> {{ .Title }}</a>
+      {{ end }}
+  </nav>
+  </div>
+{{ end }}

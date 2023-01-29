@@ -1,0 +1,6 @@
+<article>
+{{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
+  <h4 style="margin-bottom:0rem;"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+  <p style="margin-top:.25rem;">{{ partial "tags.html" . }}
+{{end}}
+</article>

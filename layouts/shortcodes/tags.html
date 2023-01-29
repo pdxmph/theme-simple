@@ -1,0 +1,5 @@
+{{ $tags_list := index .Params 0 }}
+
+{{ $tags := split $tags_list " " }} 
+
+{{ range $tags }}<a href="https://social.lol/tags/{{ substr . 1 }}">{{ . }}</a>&nbsp;{{ end }}

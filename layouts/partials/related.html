@@ -1,0 +1,10 @@
+{{ with site.RegularPages.Related . }}
+<section>
+  <h3>Related</h3>
+    <ul>
+      {{ range . | first 5 }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
+</section>

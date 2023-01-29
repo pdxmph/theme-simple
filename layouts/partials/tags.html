@@ -1,0 +1,8 @@
+{{- $tags := .Params.tags -}}
+{{- if $tags -}}
+  {{- $lastIndex := sub (len $tags) 1 -}}
+  {{- range $index, $tag := $tags -}}
+   <span class="meta-tag"><i class="fa-duotone fa-tag"></i> <a href="/tags/{{ $tag | urlize }}"> {{ $tag }}</a></span>
+    {{- if ne $index $lastIndex }}&nbsp;·&nbsp;{{ end -}}
+  {{- end -}}
+{{- end -}}

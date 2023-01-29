@@ -1,0 +1,186 @@
+@import url('https://static.omg.lol/type/fontawesome-free/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+@import url('https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css');      
+
+.homebody {
+    color: var(--text);
+    background: var(--bg);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: 1fr min(75rem, 90%) 1fr;
+    margin:0
+}
+
+.front-image {width:50%;float:right;margin-left:3rem;margin-top:3rem;}
+
+a {text-decoration-thickness: 0rem;}
+
+:root {
+  /* Set sans-serif & mono fonts */
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --mono-font: "Fira Mono", Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+  /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
+  --base-fontsize: 1.15rem;
+
+  /* Major third scale progression - see https://type-scale.com/ */
+  --header-scale: 1.25;
+
+  /* Line height is set to the "Golden ratio" for optimal legibility */
+  --line-height: 1.618;
+
+  /* Default (light) theme */
+  --bg: var(--ctp-latte-base);
+  --accent-bg: var(--ctp-latte-crust);
+  --text: var(--ctp-latte-text);
+  --text-light: var(--ctp-latte-subtext1);
+  --border: var(--ctp-latte-overlay0);
+  --accent: var(--ctp-latte-subtext1);
+  --accent-light: var(--ctp-latte-rosewater);
+  --code: var(--ctp-latte-rosewater);
+  --preformatted: var(--ctp-latte-subtext1);
+  --marked: var(--ctp-latte-rosewater);
+  --disabled: var(--ctp-latte-overlay1);
+  }
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--ctp-frappe-base);
+    --accent-bg: var(--ctp-frappe-crust);
+    --text: var(--ctp-frappe-text);
+    --text-light: var(--ctp-frappe-pink);
+    --border: var(--ctp-frappe-overlay0);
+    --accent: var(--ctp-frappe-surface);
+    --accent-light: var(--ctp-frappe-surface0);
+    --code: var(--ctp-frappe-subtext1);
+    --preformatted: var(--ctp-frappe-subtext1);
+    --marked: var(--ctp-latte-rosewater);
+    --disabled: var(--ctp-frappe-overlay1);
+  }
+
+  img,
+  video {
+    opacity: 0.6;
+  }
+}
+
+.featured-image {text-align:center;}
+
+img.featured-image {width:100%;}
+
+.header-icon {color: var(--ctp-latte-yellow);}
+
+.meta-tag {font-size: .9em; 
+  color: var(--ctp-latte-subtext);
+}
+
+p.meta-tag  {margin-top:-1rem;}
+
+.social {padding: .5rem;font-size:1.75rem;}
+
+.meteor {
+  color: var(--ctp-latte-yellow);
+}
+    
+a:hover {text-decoration: underline;}
+  
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Neuton', serif;
+  color: var(--text-light);
+}
+
+ 
+.backwards {
+        display: inline;
+        font-style: bold;
+        -moz-transform: scale(-1, -1);
+        -webkit-transform: scale(-1, -1);
+        -o-transform: scale(-1, -1);
+        -ms-transform: scale(-1, -1);
+        transform: scale(-1, -1);
+      }
+
+
+/*Social FontAwesome colors*/
+
+.fa-list-tree {
+  color: var(--ctp-latte-peach);
+}
+
+.fa-circle-heart {
+  color: var(--ctp-latte-pink);
+}
+
+.fa-circle-info {
+  color: var(--ctp-latte-lavender);
+}
+
+.fa-tags {
+  color: var(--ctp-latte-lavender);
+}
+
+.fa-pen {
+    color: var(--ctp-latte-red);
+}
+
+.fa-microblog {
+  color: var(--ctp-latte-yellow);
+}
+
+.fa-linkedin {
+  color: var(--ctp-latte-blue);
+}      
+
+.fa-camera-retro {
+  color: var(--ctp-latte-green);
+}      
+
+.fa-mastodon, .fa-camera-movie, .fa-caravan-simple {
+  color: var(--ctp-latte-lavender);
+}      
+
+.fa-twitter {
+  color: gray;
+}      
+
+.fa-github {
+  color: black;
+}      
+
+.fa-rss {
+  color: var(--ctp-latte-peach);
+}      
+
+
+.column-left {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+    
+  .column-right {
+    float: left;
+    margin-left: 2rem;
+    width: 50%;
+    padding-top: 1.5em;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .column-left, .column-right {
+      width: 100%;
+    }
+
+

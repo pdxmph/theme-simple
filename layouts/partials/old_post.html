@@ -1,0 +1,8 @@
+{{ $ageDays := div (sub now.Unix .Date.Unix) 86400 }}
+
+{{ if gt $ageDays 2000 }}
+
+<div style="border:1px solid pink;padding:.75rem;text-align:center;">
+<p>This post is more than 2,000 days old. <a href="/posts/about-old-posts/">A perspective on that.</a>
+</div>
+{{ end }}
